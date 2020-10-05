@@ -1,0 +1,43 @@
+//Classe - Herança
+
+
+class Pessoa{
+  
+  String nome;
+  String humor = "feliz";
+  bool estaComFome = false;
+  
+  Pessoa(String nomePessoa){
+    this.nome = nomePessoa;
+  }
+  
+}
+
+class Bebe extends Pessoa{
+  
+  Bebe(String nomeBebe) : super(nomeBebe){
+    this.estaComFome = true;
+  }
+}
+
+class Adulto extends Pessoa{
+  
+  Adulto(String nomeAdulto) : super(nomeAdulto);
+  
+}
+
+
+void main() {
+
+  Bebe bebe = Bebe("João");
+  Adulto adulto = Adulto("Maria");
+  
+  print(bebe.nome);
+  print(bebe.humor);
+  print(bebe.estaComFome);
+  
+  print(adulto.nome);
+  print(adulto.humor);
+  print(adulto.estaComFome);
+        
+}
